@@ -4,23 +4,27 @@
       int size =4;
       string[] AS= new string[size];
       int MaxLength = 3;
-      Console.WriteLine("Input Mass");
+      Console.WriteLine("Введите элементы массива :");
       
       for (int i = 0; i <AS.Length; i++)
       {
          Console.WriteLine("AS[{0}]=",i);
         string? a=Console.ReadLine();
-        AS [i] = a !;
-      
+        AS [i] = a !;      
       }
-        Console.WriteLine("vash massiv");                   //Вывод массива
+
+    Console.WriteLine("Ваш массив :");   
+    Console.Write("[");                             //Вывод массива
+
         for (int i=0; i<AS.Length; i++)
       {
         Console.Write(" "+ AS[i]+" ");
         if(i < AS.Length -1) Console.Write(",");
       }
+      
+    Console.WriteLine("]");
 
-string[] GetShortAS2(string[]array)                        // Создаем новый массив
+    string[] GetShortAS2(string[]array)                        // Создаем новый массив
      {
         int count = 0;
         int length= array.Length;
@@ -48,9 +52,9 @@ string[] GetShortAS2(string[]array)                        // Создаем н�
         return newArray;
      }
 
-void ShowArray(string[]array)
-{
-    Console.WriteLine("Новый массив");
+    void ShowArray(string[]array)                              // Метод вывода массива
+    {
+    Console.WriteLine("Новый массив :");
     Console.Write("[");
     for(int i=0; i<array.Length; i++)
     {
@@ -64,29 +68,4 @@ string [] GetShortAs2= GetShortAS2(AS);
 ShowArray(GetShortAs2);
 
 
-/*
-string[] array1 = new string[4] {"hello", "2", "world", "))"};
-string[] array2 = new string[array1.Length];
-void SecondArrayWithIF(string[] array1, string[] array2)
-{
-    int count = 0;
-    for (int i = 0; i < array1.Length; i++)
-    {
-    if(array1[i].Length <= 3)
-        {
-        array2[count] = array1[i];
-        count++;
-        }
-    }
-}
-void PrintArray(string[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write($"{array[i]} ");
-    }
-    Console.WriteLine();
-}
-SecondArrayWithIF(array1, array2);
-PrintArray(array2);
-*/
+
