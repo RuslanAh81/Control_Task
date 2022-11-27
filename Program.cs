@@ -13,13 +13,14 @@
         AS [i] = a !;
       
       }
-        Console.WriteLine("vash massiv");
+        Console.WriteLine("vash massiv");                   //Вывод массива
         for (int i=0; i<AS.Length; i++)
       {
-        Console.WriteLine("AS[{0}]= {1}", i,AS[i]);
+        Console.Write(" "+ AS[i]+" ");
+        if(i < AS.Length -1) Console.Write(",");
       }
 
-string[] GetShortAS2(string[]array)    // делаем новый массив
+string[] GetShortAS2(string[]array)                        // Создаем новый массив
      {
         int count = 0;
         int length= array.Length;
@@ -49,10 +50,12 @@ string[] GetShortAS2(string[]array)    // делаем новый массив
 
 void ShowArray(string[]array)
 {
+    Console.WriteLine("Новый массив");
     Console.Write("[");
     for(int i=0; i<array.Length; i++)
     {
         Console.Write(" "+ array[i]+" ");
+        if(i < array.Length -1) Console.Write(",");
     }
     Console.Write("]");
 }
