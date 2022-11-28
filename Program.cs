@@ -1,7 +1,8 @@
 ﻿ // Инициализация массива строк
-
+      Console.WriteLine("Введите количество элементов массива");
+      int size =Convert.ToInt32(Console.ReadLine());
  
-      int size =4;
+      //int size =4;
       string[] AS= new string[size];
       int MaxLength = 3;
       Console.WriteLine("Введите элементы массива :");
